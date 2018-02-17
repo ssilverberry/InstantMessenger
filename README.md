@@ -1,2 +1,2 @@
 # InstantMessenger
-Chat messenger.
+This is a new Telegram :)
