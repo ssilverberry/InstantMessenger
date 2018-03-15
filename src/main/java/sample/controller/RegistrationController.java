@@ -4,12 +4,10 @@ package sample.controller;
   Organize user registration
  */
 
-
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import sample.json.OutputClientMessage;
 import sample.json.ProtocolClient;
-import sample.model.ClientModel;
 import sample.model.User;
 
 import java.io.IOException;
