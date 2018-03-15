@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="270.0" maxWidth="300.0" prefHeight="250.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AuthorisationController">
+   <children>
+      <TextField fx:id="userNameField" minHeight="-Infinity" minWidth="-Infinity" onInputMethodTextChanged="#unlitUserNameField" prefHeight="30.0" prefWidth="200.0" promptText="Username" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <PasswordField fx:id="passwordField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Password" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="90.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+      <CheckBox fx:id="rememberMeBox" layoutX="96.0" layoutY="133.0" mnemonicParsing="false" text="Remember me" AnchorPane.leftAnchor="40.0" />
+      <Button fx:id="signInButton" mnemonicParsing="false" onAction="#signInListener" prefHeight="30.0" prefWidth="100.0" text="SIGN IN" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="160.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <VBox maxHeight="270.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="195.0">
+         <children>
+            <Label fx:id="errorLabel" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="208.0" textFill="RED" wrapText="true" VBox.vgrow="ALWAYS" />
+            <HBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="208.0">
+               <children>
+                  <Label text="Don't have account yet?">
+                     <HBox.margin>
+                        <Insets top="3.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Hyperlink fx:id="registerNow" focusTraversable="false" onAction="#registerNowListener" prefHeight="23.0" prefWidth="81.0" text="Sign up now!" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
