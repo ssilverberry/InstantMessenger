@@ -1,4 +1,7 @@
-package com.company.paul.model;
+package com.company.paul.view;
+
+import com.company.paul.model.ChatClient;
+import com.company.paul.model.UserStatusListener;
 
 import javax.swing.*;
 import java.awt.*;
