@@ -49,7 +49,7 @@ public class UserListPane extends JPanel implements UserStatusListener {
         frame.setVisible(true);
 
         if (client.connect()) {
-            client.login("guest", "guest");
+            client.login("pasha", "pasha");
         }
     }
 
