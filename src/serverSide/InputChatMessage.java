@@ -6,7 +6,7 @@ package serverSide;
 public class InputChatMessage {
 
 
-    private String mail, login, password, chatMessage;
+    private String mail, login, password, chatMessage, messageAll;
     private int idCat,idUsers;
 
     public InputChatMessage (String mail, String login, String password) {
@@ -20,9 +20,18 @@ public class InputChatMessage {
         this.password = password;
     }
 
-    public InputChatMessage (String chatMessage, int idUsers) {
+    public InputChatMessage (int idUsers,String chatMessage, String messageAll) {
         this.chatMessage = chatMessage;
         this.idUsers = idUsers;
+        this.messageAll = messageAll;
+    }
+
+    public String getMessageAll() {
+        return messageAll;
+    }
+
+    public void setMessageAll(String messageAll) {
+        this.messageAll = messageAll;
     }
 
     public String getMail() {

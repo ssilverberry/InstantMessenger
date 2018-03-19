@@ -4,8 +4,16 @@ package com.company;
  * Created by Zver on 05.03.2018.
  */
 public class IncomingServerMesage {
-   private String accept, denay, all;
+   private String accept, denay, all, messageAll;
    private Integer userId, chatId;
+
+   public String getMessageAll() {
+      return messageAll;
+   }
+
+   public void setMessageAll(String messageAll) {
+      this.messageAll = messageAll;
+   }
 
    public String getAll() {
       return all;
