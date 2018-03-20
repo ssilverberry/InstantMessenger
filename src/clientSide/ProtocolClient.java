@@ -26,15 +26,16 @@ public class ProtocolClient {
     Gson gson = new Gson();
     ViewClient viewClient = new ViewClient();
 
-    /*метод преобразования объектов в json формат
+    /*method of converting objects to json format
     * */
-    String transform (Object OutputClientMessage){
+    String transform(Object OutputClientMessage) {
         Gson out = new GsonBuilder().create();
         String json = out.toJson(OutputClientMessage);
         return json;
     }
 
     public void start() throws IOException {
+
             address = InetAddress.getByName("10.112.32.9");
         try {
             s1 = new Socket(address, PORT);
@@ -46,7 +47,7 @@ public class ProtocolClient {
             System.err.print("IO Exception");
         }
         /*
-        выводит адрес в консоль
+        outputs the address to the console
          */
         viewClient.address(address);
     }
@@ -57,17 +58,17 @@ public class ProtocolClient {
         try {
             line = inputString;
 
-            /* цикл отправки и получения сообщений
+            /* send and receive message cycle
             * */
-            while (line.compareTo("QUIT") != 0) {  // в итогде тут будет другое значение для выхода из цикла
+            while (line.compareTo("QUIT") != 0) {  // in the end, there will be another value to exit the loop
                 os.println(line);
                 response = is.readLine();
                 message = gson.fromJson(line, IncomingServerMessage.class);
-                    os.println(line);
+                os.println(line);
                     /*
-                    * ответ от сервера вывод в консоль в формате json строки*/
+                    * response from the server output to the console in json format string*/
                 viewClient.serverResp(response);
-                if(message.getMessageAll() != null){
+                if (message.getMessageAll() != null) {
                     a = true;
                 }
                 line = br.readLine();
@@ -83,7 +84,7 @@ public class ProtocolClient {
             br.close();
             s1.close();
 
-            /*выводит в консоль сообщение о закрытии соеденинения
+            /*outputs a message about the closing of the connection to the console
             * */
             viewClient.closed();
 
