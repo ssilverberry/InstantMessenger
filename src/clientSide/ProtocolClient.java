@@ -1,10 +1,9 @@
 
-package com.company;
+package clientSide;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import javax.sound.sampled.Port;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,29 +11,33 @@ import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
 
+
 public class ProtocolClient {
+    static final int PORT = 3000;
 
     Socket s1 = null;
     String line = null;
     BufferedReader br = null;
     BufferedReader is = null;
     PrintWriter os = null;
-    IncomingServerMesage mesage;
+    IncomingServerMessage message;
+    InetAddress address;
 
-    public static Gson gson = new Gson();
+    Gson gson = new Gson();
+    ViewClient viewClient = new ViewClient();
 
-    public static String transform (Object OutputClientMessage){
+    /*метод преобразования объектов в json формат
+    * */
+    String transform (Object OutputClientMessage){
         Gson out = new GsonBuilder().create();
         String json = out.toJson(OutputClientMessage);
         return json;
     }
 
     public void start() throws IOException {
-        InetAddress address = InetAddress.getByName("10.112.32.9");
-        int PORT = 3000;
-
+            address = InetAddress.getByName("10.112.32.9");
         try {
-            s1 = new Socket(address, PORT); // You can use static final constant PORT_NUM
+            s1 = new Socket(address, PORT);
             br = new BufferedReader(new InputStreamReader(System.in));
             is = new BufferedReader(new InputStreamReader(s1.getInputStream()));
             os = new PrintWriter(s1.getOutputStream(), true);
@@ -42,43 +45,47 @@ public class ProtocolClient {
             e.printStackTrace();
             System.err.print("IO Exception");
         }
-        System.out.println("Client Address : " + address);
-        System.out.println("Enter Data to echo Server ( Enter QUIT to end):");
+        /*
+        выводит адрес в консоль
+         */
+        viewClient.address(address);
     }
 
-
-
-
-    public void inputOutput(String test) throws IOException {
+    public void inputOutput(String inputString) throws IOException {
         String response = null;
         boolean a = false;
         try {
-            line = test;
-            while (line.compareTo("QUIT") != 0) {
+            line = inputString;
+
+            /* цикл отправки и получения сообщений
+            * */
+            while (line.compareTo("QUIT") != 0) {  // в итогде тут будет другое значение для выхода из цикла
                 os.println(line);
                 response = is.readLine();
-                mesage = gson.fromJson(line, IncomingServerMesage.class);
+                message = gson.fromJson(line, IncomingServerMessage.class);
                     os.println(line);
-
-                System.out.println(mesage.getChatId() + " plus " + mesage.getUserId() + " plus " + mesage.getAccept());
-                System.out.println("Server Response : " + response);
-                if(mesage.getMessageAll() != null){
+                    /*
+                    * ответ от сервера вывод в консоль в формате json строки*/
+                viewClient.serverResp(response);
+                if(message.getMessageAll() != null){
                     a = true;
                 }
                 line = br.readLine();
-
             }
 
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Socket read Error");
-        } finally {
+            System.err.println("Socket read Error");
 
+        } finally {
             is.close();
             os.close();
             br.close();
             s1.close();
-            System.out.println("Connection Closed");
+
+            /*выводит в консоль сообщение о закрытии соеденинения
+            * */
+            viewClient.closed();
 
         }
     }

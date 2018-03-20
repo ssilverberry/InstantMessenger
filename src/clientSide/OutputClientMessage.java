@@ -1,4 +1,4 @@
-package com.company;
+package clientSide;
 
 /**
  * Created by Zver on 05.03.2018.
