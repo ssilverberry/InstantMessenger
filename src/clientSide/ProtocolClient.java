@@ -36,7 +36,8 @@ public class ProtocolClient {
 
     public void start() throws IOException {
 
-            address = InetAddress.getByName("10.112.32.9");
+        address = InetAddress.getByName("10.112.32.9");
+
         try {
             s1 = new Socket(address, PORT);
             br = new BufferedReader(new InputStreamReader(System.in));
@@ -53,8 +54,8 @@ public class ProtocolClient {
     }
 
     public void inputOutput(String inputString) throws IOException {
-        String response = null;
-        boolean a = false;
+        String response;
+        boolean a;
         try {
             line = inputString;
 
