@@ -23,7 +23,10 @@ public class ProtocolClient {
     IncomingServerMessage message;
     InetAddress address;
 
+    /*convert to format json
+    * */
     Gson gson = new Gson();
+
     ViewClient viewClient = new ViewClient();
 
     /*method of converting objects to json format
