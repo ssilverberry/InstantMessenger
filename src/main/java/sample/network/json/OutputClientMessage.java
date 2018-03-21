@@ -1,4 +1,4 @@
-package sample.json;
+package sample.network.json;
 
 /**
  * Created by Zver on 05.03.2018.
@@ -23,6 +23,11 @@ public class OutputClientMessage {
         this.chatMessage = chatMessage;
         this.idUsers = idUsers;
         this.idChat = idChat;
+    }
+
+    public OutputClientMessage(Integer idUsers, String chatMessage) {
+        this.chatMessage = chatMessage;
+        this.idUsers = idUsers;
     }
 
     public void setMail(String mail) {
