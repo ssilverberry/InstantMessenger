@@ -1,75 +1,108 @@
 package sample.network.json;
 
+import java.util.List;
+
 /**
  * Created by Zver on 05.03.2018.
  */
 public class IncomingServerMessage {
-   private String accept, responseId, login;
-   private Integer userId, chatId;
-   private String chatMessage;
 
+   private Integer actionId;
+   private String login, fromUser;
+   private String msgBody;
+   private List<String> onlineUsers;
+
+   /*
+      Authorisation
+            response: 11, "login"                       - authorisation successful
+            response: 12                                - authorisation failed
+
+      Registration
+            response: 21                                - registration successful
+            response: 22                                - registration failed
+
+      Main chat:
+            response: 311  List<String> onlineUsers     - returns list of users
+            response: 312                               - no online users
+            response: 32  "fromUser", "message"         - message to all
+            response: 33  "fromUser", "message"         - message to private
+            response: 34  "toUser"                      - create private chat
+    */
 
    public IncomingServerMessage() {
    }
 
-   public IncomingServerMessage(String accept, Integer userId, String login) {
-      this.accept = accept;
-      this.userId = userId;
+   /**
+    * Successful registration response
+    */
+   public IncomingServerMessage(Integer actionId, String login) {
+      this.actionId = actionId;
       this.login = login;
    }
 
-   public IncomingServerMessage(String responseId, String fromUser, String chatMessage) {
-      this.responseId = responseId;
-      this.login = fromUser;
-      this.chatMessage = chatMessage;
+   /**
+    * Receive next responses: id = 12, id = 21, id = 22, id = 312.
+    *
+    * @param actionId - id operation
+    */
+   public IncomingServerMessage(Integer actionId) {
+      this.actionId = actionId;
+   }
+
+   /**
+    * Receive list of online users
+    *
+    * @param actionId - 311
+    * @param onlineUsers - list if user names
+    */
+   public IncomingServerMessage(Integer actionId, List<String> onlineUsers) {
+      this.actionId = actionId;
+      this.onlineUsers = onlineUsers;
+   }
+
+   /**
+    * Receive message from general chat
+    *
+    * @param actionId - 32
+    * @param fromUser - user name of writer
+    * @param msgBody - content of message
+    */
+   public IncomingServerMessage(Integer actionId, String fromUser, String msgBody){
+      this.actionId = actionId;
+      this.fromUser = fromUser;
+      this.msgBody = msgBody;
+   }
+
+   /**
+    * Receive message from private chat
+    *
+    * @param fromUser - user name of writer
+    * @param msgBody - content of message
+    * @param actionId - 33
+    */
+   public IncomingServerMessage(String fromUser, String msgBody, Integer actionId){
+      this.fromUser = fromUser;
+      this.msgBody = msgBody;
+      this.actionId = actionId;
    }
 
    public String getLogin() {
       return login;
    }
 
-   public void setLogin(String login) {
-      this.login = login;
+   public String getFromUser() {
+      return fromUser;
    }
 
-   public String getResponseId() {
-      return responseId;
+   public String getMsgBody() {
+      return msgBody;
    }
 
-   public void setResponseId(String responseId) {
-      this.responseId = responseId;
+   public List<String> getOnlineUsers() {
+      return onlineUsers;
    }
 
-   public String getChatMessage() {
-      return chatMessage;
+   public Integer getActionId() {
+      return actionId;
    }
-
-   public void setChatMessage(String chatMessage) {
-      this.chatMessage = chatMessage;
-   }
-
-   public String getAccept() {
-      return accept;
-   }
-
-   public Integer getUserId() {
-      return userId;
-   }
-
-   public Integer getChatId() {
-      return chatId;
-   }
-
-   public void setAccept(String accept) {
-      this.accept = accept;
-   }
-
-   public void setUserId(Integer userId) {
-      this.userId = userId;
-   }
-
-   public void setChatId(Integer chatId) {
-      this.chatId = chatId;
-   }
-
 }
