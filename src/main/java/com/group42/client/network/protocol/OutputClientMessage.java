@@ -1,7 +1,7 @@
-package sample.network.json;
+package com.group42.client.network.protocol;
 
 /**
- * Created by Zver on 05.03.2018.
+ * Modified by Yura 23.03.18
  */
 public class OutputClientMessage {
 
@@ -9,8 +9,8 @@ public class OutputClientMessage {
     private String email, login, password;
     private String fromUser, toUser, msgBody;
 
-    /*
-    private Integer id
+
+    /*************************************************************************
 
     1 - Authorisation
         request: 1,  "login", "password"
@@ -21,11 +21,9 @@ public class OutputClientMessage {
     3 - Main chat:
         request: 31                                     - get online users
         request: 32  "fromUser", "message"              - message to all
-        request: 33  "fromUser", "toUser", "message"    - message to private
-        request: 34  "fromUser", "toUser"               - create private chat
         request: 35  "fromUser"                         - log out
 
-     */
+     *************************************************************************/
 
     /**
      * Authorisation request constructor

@@ -1,4 +1,4 @@
-package sample.model;
+package com.group42.client.model;
 
 import java.time.LocalDate;
 
@@ -10,6 +10,10 @@ public class User {
 
     public User(String email, int userId, String userName) {
         this.userId = userId;
+        this.userName = userName;
+    }
+
+    User(String userName) {
         this.userName = userName;
     }
 

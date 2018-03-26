@@ -1,18 +1,20 @@
-package sample.network.json;
+package com.group42.client.network.protocol;
+
+import javafx.collections.FXCollections;
 
 import java.util.List;
 
 /**
- * Created by Zver on 05.03.2018.
+ * Modified by Yura on 22.03.2018.
  */
 public class IncomingServerMessage {
 
    private Integer actionId;
-   private String login, fromUser;
+   private String login, fromUser, toUser;
    private String msgBody;
    private List<String> onlineUsers;
 
-   /*
+   /******************************************************************************************
       Authorisation
             response: 11, "login"                       - authorisation successful
             response: 12                                - authorisation failed
@@ -25,9 +27,9 @@ public class IncomingServerMessage {
             response: 311  List<String> onlineUsers     - returns list of users
             response: 312                               - no online users
             response: 32  "fromUser", "message"         - message to all
-            response: 33  "fromUser", "message"         - message to private
-            response: 34  "toUser"                      - create private chat
-    */
+            response: 33  "fromUser", "message"         - message to private -> in process)
+            response: 34  "toUser"                      - create private chat -> in process)
+    ******************************************************************************************/
 
    public IncomingServerMessage() {
    }
@@ -57,6 +59,7 @@ public class IncomingServerMessage {
     */
    public IncomingServerMessage(Integer actionId, List<String> onlineUsers) {
       this.actionId = actionId;
+      this.onlineUsers = FXCollections.observableArrayList();
       this.onlineUsers = onlineUsers;
    }
 
@@ -86,6 +89,17 @@ public class IncomingServerMessage {
       this.actionId = actionId;
    }
 
+   /**
+    * Create private chat
+    *
+    * @param toUser - username with whom private chat will be created
+    * @param actionId - id operation for this <tt>34</tt>
+    */
+   public IncomingServerMessage(String toUser, Integer actionId){
+       this.toUser = toUser;
+       this.actionId = actionId;
+   }
+
    public String getLogin() {
       return login;
    }
@@ -105,4 +119,8 @@ public class IncomingServerMessage {
    public Integer getActionId() {
       return actionId;
    }
+
+    public String getToUser() {
+        return toUser;
+    }
 }
