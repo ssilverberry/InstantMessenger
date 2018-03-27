@@ -1,6 +1,11 @@
-package com.InstantMessengerServer.model;
+package com.group42.server.model;
 
-// пользователь для регистрации
+/**
+ * This Class is using for creating new accounts
+ *
+ * Here we use different constructors because of
+ * different action steps between client and server
+ */
 public class User {
     private String name;
     private String password;

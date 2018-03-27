@@ -1,6 +1,4 @@
-package com.InstantMessengerServer.controller;
-
-import com.InstantMessengerServer.controller.ServerWorker;
+package com.group42.server.controller;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -22,7 +20,7 @@ public class Server extends Thread {
     public void run() {
         try {
             ServerSocket listener = new ServerSocket(serverPort);
-            //onlineUsers.add("bot");
+            UsersDAOimpl.getInstance().connect();
             while (true) {
                 System.out.println("Wait for client");
                 Socket socket = listener.accept();

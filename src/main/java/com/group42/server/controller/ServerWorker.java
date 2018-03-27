@@ -1,8 +1,12 @@
-package com.InstantMessengerServer.controller;
+package com.group42.server.controller;
 
-import com.InstantMessengerServer.model.*;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.group42.server.model.InputMessage;
+import com.group42.server.model.OutMessage;
+import com.group42.server.model.StringCrypter;
+import com.group42.server.model.User;
 import org.apache.commons.lang3.StringUtils;
 
 
