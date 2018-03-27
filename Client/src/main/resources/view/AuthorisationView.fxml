@@ -14,7 +14,7 @@
 
 <AnchorPane maxHeight="270.0" maxWidth="300.0" minWidth="-Infinity" prefHeight="240.0" prefWidth="270.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group42.client.controllers.fx.AuthorisationController">
    <children>
-      <JFXButton fx:id="signInButton" layoutX="109.0" layoutY="14.0" onAction="#signInListener" prefHeight="35.0" ripplerFill="#4022eb" style="-fx-background-color: #6ca0dc;" text="SIGN IN" textFill="WHITE" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="145.0">
+      <JFXButton fx:id="signInButton" layoutX="109.0" layoutY="14.0" onAction="#signInListener" prefHeight="35.0" ripplerFill="#4022eb" style="-fx-background-color: #6ca0dc;" text="SIGN IN" textFill="WHITE" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="145.0">
          <font>
             <Font size="14.0" />
          </font>
@@ -43,12 +43,12 @@
             </HBox>
          </children>
       </VBox>
-      <JFXTextField fx:id="userNameField" alignment="CENTER" focusColor="#0040ff" layoutX="61.0" layoutY="59.0" prefHeight="35.0" promptText="Username" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="50.0">
+      <JFXTextField fx:id="userNameField" focusColor="#0040ff" layoutX="61.0" layoutY="59.0" prefHeight="35.0" promptText="Username" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="50.0">
          <font>
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXPasswordField fx:id="passwordField" focusColor="#0040ff" layoutX="61.0" layoutY="92.0" prefHeight="35.0" promptText="Password" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="95.0">
+      <JFXPasswordField fx:id="passwordField" focusColor="#0040ff" layoutX="61.0" layoutY="92.0" prefHeight="35.0" promptText="Password" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="95.0">
          <font>
             <Font size="15.0" />
          </font>

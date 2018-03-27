@@ -1,0 +1,143 @@
+2018-03-26 20:22:20 INFO  NetworkController:103 - Connection success!
+2018-03-26 20:22:34 INFO  AuthorisationController:84 - yura123456
+2018-03-26 22:02:46 INFO  NetworkController:105 - Connection success!
+2018-03-26 22:02:55 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["yura"]}
+2018-03-26 22:02:55 INFO  NetworkController:110 - GET RESPONSE: {"actionId":11,"login":"yura"}
+2018-03-26 22:02:55 INFO  AuthorisationController:52 - 11yura
+2018-03-26 22:02:55 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["yura"]}
+2018-03-26 22:03:01 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"yura","msgBody":"from yur"}
+2018-03-26 22:03:07 INFO  NetworkController:105 - Connection success!
+2018-03-26 22:03:13 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["yura","alex1"]}
+2018-03-26 22:03:13 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["yura","alex1"]}
+2018-03-26 22:03:13 INFO  NetworkController:110 - GET RESPONSE: {"actionId":11,"login":"alex1"}
+2018-03-26 22:03:13 INFO  AuthorisationController:52 - 11alex1
+2018-03-26 22:03:14 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["yura","alex1"]}
+2018-03-26 22:03:14 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["yura","alex1"]}
+2018-03-26 22:03:23 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"allo"}
+2018-03-26 22:03:23 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"allo"}
+2018-03-26 22:03:23 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"sfsdf"}
+2018-03-26 22:03:23 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"sfsdf"}
+2018-03-26 22:03:24 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"fg"}
+2018-03-26 22:03:24 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"fg"}
+2018-03-26 22:03:30 INFO  NetworkController:105 - Connection success!
+2018-03-26 22:04:15 INFO  NetworkController:110 - GET RESPONSE: {"actionId":21,"login":"new"}
+2018-03-26 22:04:47 INFO  NetworkController:110 - GET RESPONSE: {"actionId":12}
+2018-03-26 22:05:21 INFO  NetworkController:110 - GET RESPONSE: {"actionId":21,"login":"new"}
+2018-03-26 22:05:59 ERROR NetworkController:115 - Interrupted 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.8.0_91]
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.InputStreamReader.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.fill(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_91]
+	at com.InstantMessenger.client.network.NetworkController$ConnectionThread.run(NetworkController.java:108) [InstantMessengerClient-1.0-SNAPSHOT.jar:?]
+2018-03-26 22:05:59 ERROR NetworkController:115 - Interrupted 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.8.0_91]
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.InputStreamReader.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.fill(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_91]
+	at com.InstantMessenger.client.network.NetworkController$ConnectionThread.run(NetworkController.java:108) [InstantMessengerClient-1.0-SNAPSHOT.jar:?]
+2018-03-26 22:05:59 ERROR NetworkController:115 - Interrupted 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.8.0_91]
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.InputStreamReader.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.fill(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_91]
+	at com.InstantMessenger.client.network.NetworkController$ConnectionThread.run(NetworkController.java:108) [InstantMessengerClient-1.0-SNAPSHOT.jar:?]
+2018-03-26 22:06:33 INFO  NetworkController:105 - Connection success!
+2018-03-26 22:06:50 INFO  NetworkController:110 - GET RESPONSE: {"actionId":21,"login":"new"}
+2018-03-26 22:06:58 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user"]}
+2018-03-26 22:06:58 INFO  NetworkController:110 - GET RESPONSE: {"actionId":11,"login":"new user"}
+2018-03-26 22:06:58 INFO  AuthorisationController:52 - 11new user
+2018-03-26 22:06:58 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user"]}
+2018-03-26 22:07:02 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"new user","msgBody":"allo"}
+2018-03-26 22:07:03 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"new user","msgBody":"sdf"}
+2018-03-26 22:07:04 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"new user","msgBody":"sdgsdg"}
+2018-03-26 22:07:06 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"new user","msgBody":"sdsdf"}
+2018-03-26 22:07:07 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"new user","msgBody":"sdgdsg"}
+2018-03-26 22:07:13 INFO  NetworkController:105 - Connection success!
+2018-03-26 22:07:18 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","yura"]}
+2018-03-26 22:07:18 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","yura"]}
+2018-03-26 22:07:18 INFO  NetworkController:110 - GET RESPONSE: {"actionId":11,"login":"yura"}
+2018-03-26 22:07:18 INFO  AuthorisationController:52 - 11yura
+2018-03-26 22:07:18 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","yura"]}
+2018-03-26 22:07:18 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","yura"]}
+2018-03-26 22:07:24 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"yura","msgBody":"dsfsdf"}
+2018-03-26 22:07:24 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"yura","msgBody":"dsfsdf"}
+2018-03-26 22:07:25 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"yura","msgBody":"allo"}
+2018-03-26 22:07:25 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"yura","msgBody":"allo"}
+2018-03-26 22:07:32 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user"]}
+2018-03-26 22:07:32 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user"]}
+2018-03-26 22:07:41 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","alex1"]}
+2018-03-26 22:07:41 INFO  NetworkController:110 - GET RESPONSE: {"actionId":11,"login":"alex1"}
+2018-03-26 22:07:41 INFO  AuthorisationController:52 - 11alex1
+2018-03-26 22:07:41 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","alex1"]}
+2018-03-26 22:07:47 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"allo"}
+2018-03-26 22:07:48 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"sdfsdf"}
+2018-03-26 22:08:30 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"allo"}
+2018-03-26 22:08:34 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"dasfsdf"}
+2018-03-26 22:08:35 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"sdf"}
+2018-03-26 22:08:36 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"\nsdf"}
+2018-03-26 22:08:41 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user"]}
+2018-03-26 22:08:52 INFO  NetworkController:105 - Connection success!
+2018-03-26 22:09:01 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","yura"]}
+2018-03-26 22:09:01 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","yura"]}
+2018-03-26 22:09:01 INFO  NetworkController:110 - GET RESPONSE: {"actionId":11,"login":"yura"}
+2018-03-26 22:09:01 INFO  AuthorisationController:52 - 11yura
+2018-03-26 22:09:02 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","yura"]}
+2018-03-26 22:09:02 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","yura"]}
+2018-03-26 22:09:11 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"yura","msgBody":"allo"}
+2018-03-26 22:09:11 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"yura","msgBody":"allo"}
+2018-03-26 22:09:21 INFO  NetworkController:105 - Connection success!
+2018-03-26 22:09:25 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","yura","alex1"]}
+2018-03-26 22:09:25 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","yura","alex1"]}
+2018-03-26 22:09:25 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","yura","alex1"]}
+2018-03-26 22:09:25 INFO  NetworkController:110 - GET RESPONSE: {"actionId":11,"login":"alex1"}
+2018-03-26 22:09:25 INFO  AuthorisationController:52 - 11alex1
+2018-03-26 22:09:25 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","yura","alex1"]}
+2018-03-26 22:09:25 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","yura","alex1"]}
+2018-03-26 22:09:25 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","yura","alex1"]}
+2018-03-26 22:09:30 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"hey"}
+2018-03-26 22:09:30 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"hey"}
+2018-03-26 22:09:30 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"hey"}
+2018-03-26 22:09:41 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"allo"}
+2018-03-26 22:09:41 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"allo"}
+2018-03-26 22:09:41 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"alex1","msgBody":"allo"}
+2018-03-26 22:09:53 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","alex1"]}
+2018-03-26 22:09:53 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","alex1"]}
+2018-03-26 22:10:01 INFO  NetworkController:105 - Connection success!
+2018-03-26 22:10:06 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","alex1","yura"]}
+2018-03-26 22:10:06 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","alex1","yura"]}
+2018-03-26 22:10:06 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","alex1","yura"]}
+2018-03-26 22:10:06 INFO  NetworkController:110 - GET RESPONSE: {"actionId":11,"login":"yura"}
+2018-03-26 22:10:06 INFO  AuthorisationController:52 - 11yura
+2018-03-26 22:10:06 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","alex1","yura"]}
+2018-03-26 22:10:06 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","alex1","yura"]}
+2018-03-26 22:10:06 INFO  NetworkController:110 - GET RESPONSE: {"actionId":311,"onlineUsers":["new user","alex1","yura"]}
+2018-03-26 22:10:13 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"yura","msgBody":"allo"}
+2018-03-26 22:10:13 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"yura","msgBody":"allo"}
+2018-03-26 22:10:13 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"yura","msgBody":"allo"}
+2018-03-26 22:10:24 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"new user","msgBody":"allo"}
+2018-03-26 22:10:24 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"new user","msgBody":"allo"}
+2018-03-26 22:10:24 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"new user","msgBody":"allo"}
+2018-03-26 22:10:26 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"new user","msgBody":"sdfsdf"}
+2018-03-26 22:10:26 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"new user","msgBody":"sdfsdf"}
+2018-03-26 22:10:26 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"new user","msgBody":"sdfsdf"}
+2018-03-26 22:10:28 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"new user","msgBody":"sdsdf"}
+2018-03-26 22:10:28 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"new user","msgBody":"sdsdf"}
+2018-03-26 22:10:28 INFO  NetworkController:110 - GET RESPONSE: {"actionId":32,"fromUser":"new user","msgBody":"sdsdf"}

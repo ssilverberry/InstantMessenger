@@ -91,7 +91,7 @@ public class NetworkController {
 
         @Override
         public void run() {
-            try(Socket socket = new Socket(InetAddress.getByName("PC17760"), socketPort);
+            try(Socket socket = new Socket(InetAddress.getLocalHost(), socketPort);
                 BufferedReader inputStream = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
                 PrintWriter outputStream = new PrintWriter(socket.getOutputStream(), true);) {
                 this.inputStream = inputStream;
